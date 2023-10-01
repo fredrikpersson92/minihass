@@ -1,0 +1,7 @@
+- type: "custom:button-card"
+  entity: light.example
+  template:
+    - custom_card_light
+  variables:
+    light_name: Window
+    light_label: Bedroom
