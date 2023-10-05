@@ -8,4 +8,6 @@
 I will keep adding new card gradually. For now, these are the available card templates you can copy and use:
 <li>
   <ul>hello</ul>
+  <ul>hello</ul>
+  <ul>hello</ul>
 </li>
