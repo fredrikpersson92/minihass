@@ -6,6 +6,7 @@
 <p>This dashboard is dependent on the correct theme to utilize its full potential, including light and dark modes.</p>
 <h2>Included cards</h2>
 <p>I will keep adding new card gradually. For now, these are the available card templates you can copy and use:</p>
+<br>
 <ul>
   <li>Coffee</li>
   <li>Tea</li>
