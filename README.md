@@ -5,8 +5,9 @@
 <h2>Theme</h2>
 <p>This dashboard is dependent on the correct theme to utilize its full potential, including light and dark modes.</p>
 <h2>Included cards</h2>
-I will keep adding new card gradually. For now, these are the available card templates you can copy and use:
-<li><ul>hello</ul>
-  <ul>hello</ul>
-  <ul>hello</ul>
-</li>
+<p>I will keep adding new card gradually. For now, these are the available card templates you can copy and use:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
