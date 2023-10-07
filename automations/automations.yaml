@@ -1,0 +1,34 @@
+- id: '1680719974574'
+  alias: MiniHass Themes
+  description: Switch between MiniHass_Dark and MiniHass_Light
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.theme_mode
+    to: 'on'
+    id: Dark
+  - platform: state
+    entity_id:
+    - input_boolean.theme_mode
+    to: 'off'
+    id: Light
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - Dark
+      sequence:
+      - service: frontend.set_theme
+        data:
+          name: MiniHass_Dark
+    - conditions:
+      - condition: trigger
+        id:
+        - Light
+      sequence:
+      - service: frontend.set_theme
+        data:
+          name: MiniHass_Light
+  mode: single
