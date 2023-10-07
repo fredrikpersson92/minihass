@@ -1,0 +1,56 @@
+---
+custom_card_navigate:
+  variables: 
+    name:
+    icon:
+    background:
+    navigation_path:
+  name: "[[[ return variables.name ]]]"
+  icon: "[[[ return variables.icon ]]]"
+  show_name: true
+  show_icon: true
+  show_label: false
+  show_state: false
+  tap_action:
+    action: navigate
+    navigation_path: "[[[ return variables.navigation_path ]]]"
+  styles: &navigate_card_styles_3
+    grid:
+      - grid-template-areas: '"n" "ent1"'
+      - grid-template-rows: 1fr 1fr
+      - column-gap: 10px
+    card:
+      - height: 100%
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: 1rem
+      - background: "[[[ return variables.background ]]]"
+      - overflow: hidden
+      - aspect-ratio: 3/2
+    name:
+      - position: absolute
+      - top: 1rem
+      - text-align: left
+      - font-size: "var(--fs-500)"
+      - font-family: Montserrat
+      - font-weight: 600
+      - justify-self: start
+      - align-self: start
+      - color: "var(--color-white)"
+      - z-index: 2
+      - overflow: visible
+    img_cell:
+      - position: absolute
+      - top: 20%
+      - left: 40%
+      - overflow: visible
+    icon:
+      - position: absolute
+      - width: 20em
+      - opacity: 20%
+      - color: "var(--color-white)"
+      - transform: rotate(-20deg)
+    custom_fields:
+      ent1:
+        - justify-self: start
+        - align-self: end
