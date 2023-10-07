@@ -10,12 +10,13 @@ This UI does use some custom components that will need to be downloaded from HAC
 <p>This dashboard is dependent on the correct theme to utilize its full potential, including light and dark modes. I also opted for the font Montserrat from Google Fonts. You can install custom fonts from Google by adding this to your configuration.yaml, or as a *resource* to your GUI dashboard</p>
 <br>
 ```
-- type: "custom:button-card"
-  view_layout:
-    grid-area: "r1"
-  entity: alarm_control_panel.alarmo
-  template:
-    - custom_card_security
+lovelace:
+  mode: yaml
+  resources:
+  - url: /www/community/button-card/button-card.js
+    type: module
+  - url: https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+    type: css
 ```
 <h2>Included cards</h2>
 <p>I will keep adding new cards gradually. For now, these are the available card templates you can copy and use:</p>
