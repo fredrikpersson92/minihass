@@ -13,7 +13,7 @@ Ps. If using a YAML dashboard, I recommend creating a folder for all templates a
 button_card_templates: !include_dir_merge_named "/config/ui_lovelace_minihass/templates/"
 ```
 
-## Theme and fonts and card
+## Theme and font and cards
 
 This dashboard is 90% made of [custom Button Card](https://github.com/custom-cards/button-card). Follow the instructions in the link to install it. You will also need to add my theme to utilize the card's full potential, including light and dark modes. You can of course edit the values in the theme to suit your style :) I also opted for the font Montserrat from Google Fonts. You can install the font by adding the line below to your configuration.yaml, or as a *resource* to your GUI dashboard.
 
@@ -29,11 +29,11 @@ This dashboard is 90% made of [custom Button Card](https://github.com/custom-car
 
 ## Included cards
 
-I will keep adding new cards gradually. For now, these are the available card templates you can copy and use. For each card, there is a template and an example of the actual code to put in your dashboard. 
+I will keep adding new cards gradually. For now, these are the available card templates you can copy and use. For each card, there is a template (multiple for some) and an example of the actual code to put in your dashboard. 
 
 * Navigate Card
-* Light Card
 * Garbage Collection Card
+* Light Card
 * Security Card
 * Alarm Card
 * Camera Card
