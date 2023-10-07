@@ -31,55 +31,11 @@ This UI does use some custom components that will need to be downloaded from HAC
 
 ```json
 
-    {
-     "step1":{
-             "fields":[
-                 {
-                     "key":"name",
-                     "type":"edit_text",
-                     "hint":"Enter Your Name"
-                 },
-                 {
-                     "key":"email",
-                     "type":"edit_text",
-                     "hint":"Enter email address"
-                 },
-                 {
-                     "key":"labelBackgroundImage",
-                     "type":"label",
-                     "text":"Choose Background Image"
-                 },
-                 {
-                     "key":"chooseImage",
-                     "type":"choose_image",
-                     "uploadButtonText":"Choose"
-                 },
-                 {
-                     "key":"getAddressFromLatlng",
-                     "type":"gps",
-                     "options":[
-                        {
-                          "val":"2.334,3.444"
-                        }
-                     ]
-                 },
-                 {
-                     "key":"showDropDown",
-                     "type":"spinner",
-                     "options":[
-                        {
-                         "default":true,
-                         "displayText":"Delhi"
-                        },
-                         {
-                         "default":false,
-                         "displayText":"Mumbai"
-                        }
-                     ]
-                 }
-             ],
-             "title":"Step 1",
-             "next":"step2"
-         }
-    }
+  lovelace:
+    mode: yaml
+    resources:
+    - url: /www/community/button-card/button-card.js
+      type: module
+    - url: https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+      type: css
   ```
