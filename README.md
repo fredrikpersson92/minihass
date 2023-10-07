@@ -21,7 +21,6 @@ This UI does use some custom components that will need to be downloaded from HAC
 </ul>
 
 ```
-
   lovelace:
     mode: yaml
     resources:
