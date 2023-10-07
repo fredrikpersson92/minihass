@@ -20,7 +20,7 @@ This UI does use some custom components that will need to be downloaded from HAC
   <li>Security Card</li>
 </ul>
 
-```json
+```
 
   lovelace:
     mode: yaml
