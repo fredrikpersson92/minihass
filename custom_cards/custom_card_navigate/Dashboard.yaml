@@ -1,0 +1,8 @@
+- type: "custom:button-card"
+  template:
+    - custom_card_navigate
+  variables: 
+    name: Smart <br>Home
+    icon: mdi:home-automation
+    background: "var(--gradient-blue)"
+    navigation_path: /lovelace-minihass/smarthome
