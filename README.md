@@ -26,8 +26,8 @@ This dashboard is dependent on the correct theme to utilize its full potential, 
 
 I will keep adding new cards gradually. For now, these are the available card templates you can copy and use:
 
-*Navigate Card
-*Light Card
-*Garbage Collection Card
-*Security Card
+* Navigate Card
+* Light Card
+* Garbage Collection Card
+* Security Card
 
