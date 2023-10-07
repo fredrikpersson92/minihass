@@ -6,16 +6,16 @@
 
 ## How do I install it?
 
-This UI does use some custom components that will need to be downloaded from HACS, but other than that, it completely relies on your ability to add lines of YAML code to either your GUI Lovelace dashboard or through the backend, using tools such as Visual Studio Code. The latter is much easier and gives you more control. However, if you already have a dashboard in the GUI editor, then you can add any of the cards there by using the manual card and pasting the code. Please note that the cards rely on templates though, which will need to be added in the Raw Config Editor, or in your lovelace config. You can read more on that [here](https://github.com/custom-cards/button-card#configuration-templates).
+This UI does use some custom components that will need to be downloaded from HACS, but other than that, it completely relies on your ability to add lines of YAML code to either your GUI Lovelace dashboard or through the backend, using tools such as Visual Studio Code. The latter is much easier and gives you more control. However, if you already have a dashboard in the GUI editor, then you can add any of the cards there by using the manual card and pasting the code. Please note that the cards rely on templates though, which will need to be added in the Raw Config Editor, or in your Lovelace config. You can read more on that [here](https://github.com/custom-cards/button-card#configuration-templates).
 
-Ps. If using a YAML dashboard, I recommend creating a folder for all templates, and referencing that in your lovelace configuration. ('m not sure if this also can be done in the GUI)
+Ps. If using a YAML dashboard, I recommend creating a folder for all templates and referencing that in your Lovelace configuration. ('m not sure if this also can be done in the GUI)
 ```
 button_card_templates: !include_dir_merge_named "/config/ui_lovelace_minihass/templates/"
 ```
 
-## Theme and fonts
+## Theme and fonts and card
 
-This dashboard is dependent on the correct theme to utilize its full potential, including light and dark modes. I also opted for the font Montserrat from Google Fonts. You can install custom fonts from Google by adding this to your configuration.yaml, or as a *resource* to your GUI dashboard.
+This dashboard is 90% made of [custom Button Card](https://github.com/custom-cards/button-card). Follow the instructions in the link to install it. You will also need to add my theme to utilize the card's full potential, including light and dark modes. You can of course edit the values in the theme to suit your style :) I also opted for the font Montserrat from Google Fonts. You can install the font by adding the line below to your configuration.yaml, or as a *resource* to your GUI dashboard.
 
 ```
   lovelace:
@@ -29,7 +29,7 @@ This dashboard is dependent on the correct theme to utilize its full potential, 
 
 ## Included cards
 
-I will keep adding new cards gradually. For now, these are the available card templates you can copy and use. For each card there is a template and an example of the actual code to put in your dashboard. 
+I will keep adding new cards gradually. For now, these are the available card templates you can copy and use. For each card, there is a template and an example of the actual code to put in your dashboard. 
 
 * Navigate Card
 * Light Card
