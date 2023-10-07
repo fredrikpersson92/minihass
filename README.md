@@ -16,7 +16,7 @@ This UI does use some custom components that will need to be downloaded from HAC
   entity: alarm_control_panel.alarmo
   template:
     - custom_card_security
-    ```
+```
 <h2>Included cards</h2>
 <p>I will keep adding new cards gradually. For now, these are the available card templates you can copy and use:</p>
 <br>
