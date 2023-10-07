@@ -1,0 +1,8 @@
+- type: "custom:button-card"
+  template:
+    - custom_card_garbage_collection
+  variables:
+    label: Days until next<br>garbage collection
+    counter: >
+      [[[ return states['sensor.garbage_collection'].state ]]]
+  entity: input_boolean.toggle_button_notify_garbage
