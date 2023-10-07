@@ -6,7 +6,7 @@
 
 ## How do I install it?
 
-This UI does use some custom components that will need to be downloaded from HACS, but other than that, it completely relies on your ability to add lines of YAML code to either your GUI Lovelace dashboard or through the backend, using tools such as Visual Studio Code. The latter is much easier and gives you more control. However, if you already have a dashboard in the GUI editor, then you can add any of the cards there by using the manual card and pasting the code. Please note that some cards rely on templates though, which would need to be added in the Raw Config Editor. You can read more on that [here](https://github.com/custom-cards/button-card#configuration-templates).
+This UI does use some custom components that will need to be downloaded from HACS, but other than that, it completely relies on your ability to add lines of YAML code to either your GUI Lovelace dashboard or through the backend, using tools such as Visual Studio Code. The latter is much easier and gives you more control. However, if you already have a dashboard in the GUI editor, then you can add any of the cards there by using the manual card and pasting the code. Please note that the cards rely on templates though, which will need to be added in the Raw Config Editor, or in your lovelace config. You can read more on that [here](https://github.com/custom-cards/button-card#configuration-templates).
 
 Ps. If using a YAML dashboard, I recommend creating a folder for all templates, and referencing that in your lovelace configuration. ('m not sure if this also can be done in the GUI)
 ```
