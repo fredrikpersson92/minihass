@@ -1,0 +1,4 @@
+- type: "custom:button-card"
+  entity: alarm_control_panel.alarmo
+  template:
+    - custom_card_security
