@@ -13,7 +13,8 @@ This UI does use some custom components that will need to be downloaded from HAC
 <p>I will keep adding new cards gradually. For now, these are the available card templates you can copy and use:</p>
 <br>
 <ul>
-  <li>Navigation Card</li>
+  <li>Navigate Card</li>
   <li>Light Card</li>
   <li>Garbage Collection Card</li>
+  <li>Security Card</li>
 </ul>
