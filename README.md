@@ -27,3 +27,7 @@ lovelace:
   <li>Garbage Collection Card</li>
   <li>Security Card</li>
 </ul>
+
+This is a lsit
+*item1
+*item2
