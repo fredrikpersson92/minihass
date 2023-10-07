@@ -24,10 +24,12 @@ This dashboard is dependent on the correct theme to utilize its full potential, 
 
 ## Included cards
 
-I will keep adding new cards gradually. For now, these are the available card templates you can copy and use:
+I will keep adding new cards gradually. For now, these are the available card templates you can copy and use. For each card there is a template and an example of the actual code to put in your dashboard. 
 
 * Navigate Card
 * Light Card
 * Garbage Collection Card
 * Security Card
+* Alarm Card
+* Camera Card
 
