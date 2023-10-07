@@ -9,17 +9,6 @@ This UI does use some custom components that will need to be downloaded from HAC
 <h2>Theme and fonts</h2>
 <p>This dashboard is dependent on the correct theme to utilize its full potential, including light and dark modes. I also opted for the font Montserrat from Google Fonts. You can install custom fonts from Google by adding this to your configuration.yaml, or as a *resource* to your GUI dashboard</p>
 <br>
-
-<h2>Included cards</h2>
-<p>I will keep adding new cards gradually. For now, these are the available card templates you can copy and use:</p>
-<br>
-<ul>
-  <li>Navigate Card</li>
-  <li>Light Card</li>
-  <li>Garbage Collection Card</li>
-  <li>Security Card</li>
-</ul>
-
 ```
   lovelace:
     mode: yaml
@@ -29,3 +18,13 @@ This UI does use some custom components that will need to be downloaded from HAC
     - url: https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
       type: css
   ```
+  
+<h2>Included cards</h2>
+<p>I will keep adding new cards gradually. For now, these are the available card templates you can copy and use:</p>
+<br>
+<ul>
+  <li>Navigate Card</li>
+  <li>Light Card</li>
+  <li>Garbage Collection Card</li>
+  <li>Security Card</li>
+</ul>
