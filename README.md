@@ -10,6 +10,7 @@ This UI does use some custom components that will need to be downloaded from HAC
 <p>This dashboard is dependent on the correct theme to utilize its full potential, including light and dark modes. I also opted for the font Montserrat from Google Fonts. You can install custom fonts from Google by adding this to your configuration.yaml, or as a *resource* to your GUI dashboard</p>
 <br>
 ```json
+
 lovelace:
   mode: yaml
   resources:
