@@ -1,0 +1,8 @@
+- type: "custom:button-card"
+  entity: camera.smart_camera
+  template:
+    - custom_card_camera
+  variables: 
+    name: Office
+    background: "var(--gradient-orange)"
+    icon: <ha-icon icon="mdi:desk"></ha-icon>
