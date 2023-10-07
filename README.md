@@ -4,7 +4,7 @@
 
 **Hi and welcome to MiniHass MKII, my second version of this minimalistic, rounded, and colorful dashboard UI for Home Assistant.**
 
-# How do I install it?
+## How do I install it?
 
 This UI does use some custom components that will need to be downloaded from HACS, but other than that, it completely relies on your ability to add lines of YAML code to either your GUI Lovelace dashboard or through the backend, using tools such as Visual Studio Code. The latter is much easier and gives you more control. However, if you already have a dashboard in the GUI editor, then you can add any of the cards there by using the manual card and pasting the code. Please note that some cards rely on templates though, which would need to be added in the Raw Config Editor. You can read more on that [here](https://github.com/custom-cards/button-card#configuration-templates).
 
@@ -22,7 +22,7 @@ This dashboard is dependent on the correct theme to utilize its full potential, 
       type: css
   ```
 
-### Included cards
+## Included cards
 
 I will keep adding new cards gradually. For now, these are the available card templates you can copy and use:
 
