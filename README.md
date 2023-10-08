@@ -37,4 +37,5 @@ I will keep adding new cards gradually. For now, these are the available card te
 * Security Card
 * Alarm Card
 * Camera Card
+* Alarm Card(s)
 
