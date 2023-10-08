@@ -41,7 +41,8 @@ I will keep adding new cards gradually. For now, these are the available card te
 * Security Card
 * Alarm(s) Card
 
-![Cards](https://github.com/fredrikpersson92/minihass/assets/105781178/62dead7b-680d-479b-b1af-eff9d4a96906)
+![Cards](https://github.com/fredrikpersson92/minihass/assets/105781178/4ce74cd0-1e09-4c9e-80d5-47e45cf5cb62)
+
 
 
 *Please note that this is very much a work in progress and many things are not perfect. Especially the backend theme :)
