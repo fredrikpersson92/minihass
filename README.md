@@ -2,7 +2,8 @@
 
 ![MiniHass-Banner-01](https://github.com/fredrikpersson92/minihass/assets/105781178/5b3fd949-3a2f-406e-904b-17997335c291)
 
-**Hi and welcome to MiniHass MKII, my second version of this minimalistic, rounded, and colorful dashboard UI for Home Assistant.**
+**Hi and welcome to MiniHass MKII, my second version of this minimalistic, rounded, and colorful dashboard UI for Home Assistant.
+I was fortunate to have this featured in Everything Smart Home's [Youtube video](https://www.youtube.com/watch?v=7g9T_vKD4ww&t=8s&ab_channel=EverythingSmartHome) and there have since been many requests to share the cards. So here it goes! I hope everything works as I am quite new to sharing things on Github :)**
 
 ## How do I install it?
 
