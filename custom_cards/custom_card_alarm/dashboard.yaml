@@ -1,0 +1,216 @@
+##########################
+#Alarm card with 1 entity#
+##########################
+
+- type: "custom:button-card"
+  entity: group.dummy_siren_group
+  show_name: false
+  show_icon: false
+  show_label: false
+  show_state: false
+  tap_action: none
+  template:
+    - custom_card_alarm
+  variables:
+    state_name_on: Fire alarm
+    state_name_off: All clear
+    state_icon_color_on: "var(--color-red)"
+    animation: shake .2s ease infinite
+  styles:
+    grid:
+      - grid-template-areas: '"icon" "ent1" "blank" "silence"'
+      - grid-template-rows: 40px min-content 1fr 30px
+      - grid-template-columns: 100%
+      - row-gap: 8px
+    card:
+      - height: 100%
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: 1rem 0rem 1rem
+      - justify-content: center
+      - justify-items: center
+    custom_fields:
+      ent1:
+        - justify-self: center
+      silence:
+        - padding-top: .8rem
+        - border-top: 4px solid
+        - border-color: "var(--background)"
+      icon:
+        - color: "var(--contrast-33)"
+  custom_fields:
+    ent1:
+      card:
+        type: "custom:button-card"
+        entity: input_boolean.dummy_siren1
+        name: Main Siren
+        variables:
+          alarm_color: "var(--color-red)"
+        template:
+          - custom_field_alarm_entity
+    silence: *silence
+    icon:
+      <ha-icon icon="far:bell" style="height:40px"></ha-icon>
+
+            
+############################
+#Alarm card with 2 entities#
+############################
+- type: "custom:button-card"
+  entity: group.dummy_water_group
+  show_name: false
+  show_icon: false
+  show_label: false
+  show_state: false
+  tap_action: none
+  template:
+    - custom_card_alarm
+  variables:
+    state_icon_color_on: "var(--color-blue)"
+    animation: scale 2s linear infinite
+  styles:
+    grid:
+      - grid-template-areas: '"icon icon" "ent1 ent2" "blank blank" "silence silence"'
+      - grid-template-rows: 40px min-content 1fr 30px
+      - grid-template-columns: 50% 50%
+      - row-gap: 8px
+    card:
+      - height: 100%
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: 1rem 0rem 1rem
+      - justify-content: center
+      - justify-items: center
+    custom_fields:
+      ent1:
+        - justify-self: end
+      ent2:
+        - justify-self: start
+      silence:
+        - padding-top: .8rem
+        - border-top: 4px solid
+        - border-color: "var(--background)"
+      icon:
+        - color: "var(--contrast-33)"
+  custom_fields:
+    ent1:
+      card:
+        type: "custom:button-card"
+        entity: input_boolean.dummy_water1
+        name: Laundry
+        variables:
+          alarm_color: "var(--color-blue)"
+        template:
+          - custom_field_alarm_entity
+    ent2:
+      card:
+        type: "custom:button-card"
+        entity: input_boolean.dummy_water2
+        name: Kitchen
+        variables:
+          alarm_color: "var(--color-blue)"
+        template:
+          - custom_field_alarm_entity
+    silence: *silence
+    icon:
+      <ha-icon icon="mdi:liquid-spot" style="height:40px"></ha-icon>
+
+############################
+#Alarm card with 4 entities#
+############################
+
+- type: "custom:button-card"
+  entity: group.dummy_smoke_group
+  template:
+    - custom_card_alarm
+  show_name: true
+  show_icon: false
+  show_label: false
+  show_state: false
+  tap_action: none
+  variables:
+    state_name_on: Fire alarm
+    state_name_off: All clear
+    state_icon_color_on: "var(--color-orange)"
+    animation: blink 1s ease infinite
+  styles:
+    grid:
+      - grid-template-areas: '"icon" "n" "ent1" "ent2" "ent3" "ent4" "blank" "silence"'
+      - grid-template-rows: repeat(6, min-content) 1fr 60px
+      - row-gap: 8px
+    card:
+      - height: 100%
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: 2rem 0rem 0rem
+      - justify-content: center
+      - justify-items: center
+    name:
+      - margin: .5rem 0
+      - color: "var(--contrast-100)"
+      - text-align: center
+      - font-size: "var(--fs-600)"
+      - font-family: Montserrat
+      - font-weight: 500
+      - justify-self: center
+      - align-self: center
+      - overflow: visible
+    custom_fields:
+      ent1: &ent_margin
+        - margin-left: 10%
+      ent2: *ent_margin
+      ent3: *ent_margin
+      ent4: *ent_margin
+      silence:
+        - padding-top: .8rem
+        - border-top: 4px solid
+        - border-color: "var(--background)"
+      icon:
+        - color: "var(--contrast-33)"
+  custom_fields:
+    ent1:
+      card:
+        type: "custom:button-card"
+        entity: input_boolean.dummy_smoke1
+        name: Kitchen
+        variables:
+          alarm_color: "var(--color-orange)"
+        template:
+          - custom_field_alarm_entity
+    ent2:
+      card:
+        type: "custom:button-card"
+        entity: input_boolean.dummy_smoke2
+        name: Laundry Room
+        variables:
+          alarm_color: "var(--color-orange)"
+        template:
+          - custom_field_alarm_entity
+    ent3:
+      card:
+        type: "custom:button-card"
+        entity: input_boolean.dummy_smoke3
+        name: Living Room
+        variables:
+          alarm_color: "var(--color-orange)"
+        template:
+          - custom_field_alarm_entity
+    ent4:
+      card:
+        type: "custom:button-card"
+        entity: input_boolean.dummy_smoke4
+        name: Family Room
+        variables:
+          alarm_color: "var(--color-orange)"
+        template:
+          - custom_field_alarm_entity
+    silence: &silence
+      card:
+        type: "custom:button-card"
+        entity: "[[[ return entity.entity_id ]]]"
+        template:
+          - custom_field_alarm_silence
+    icon:
+      <ha-icon icon="fas:fire" style="height:40px"></ha-icon>
+
+            
