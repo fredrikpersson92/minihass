@@ -1,0 +1,1 @@
+For the alarm card you can create groups of the alarms entites you use per card. For example, if you have 4 smoke detectors, group these into one entity and assign that to the top level in the card. This will make sure the icon and name state changes, and that the "silence" button works.
