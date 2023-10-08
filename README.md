@@ -31,6 +31,8 @@ This dashboard is 90% made of [custom Button Card](https://github.com/custom-car
 
 I will keep adding new cards gradually. For now, these are the available card templates you can copy and use. For each card, there is a template (multiple for some) and an example of the actual code to put in your dashboard. 
 
+* Settings Card
+* Title Card
 * Navigate Card
 * Garbage Collection Card
 * Light Card
@@ -39,3 +41,4 @@ I will keep adding new cards gradually. For now, these are the available card te
 * Camera Card
 * Alarm Card(s)
 
+![Cards](https://github.com/fredrikpersson92/minihass/assets/105781178/5f58a9be-ef37-46c1-a051-a5f675cc9949)
