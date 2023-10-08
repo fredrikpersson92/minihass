@@ -1,0 +1,5 @@
+- type: "custom:button-card"
+  template:
+    - custom_card_section_title
+  variables:
+    section_title: Navigate
