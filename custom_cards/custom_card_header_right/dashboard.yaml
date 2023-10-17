@@ -1,0 +1,8 @@
+- type: "custom:button-card"
+  template:
+    - custom_card_header_right
+  variables:
+    entity1: alarm_control_panel.alarmo
+    icon1:
+    entity2: input_boolean.theme_mode
+    icon2: mdi:contrast-circle
