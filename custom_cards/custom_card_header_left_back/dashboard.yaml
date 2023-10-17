@@ -1,0 +1,6 @@
+- type: "custom:button-card"
+  template:
+    - custom_card_header_left_back
+  variables:
+    icon: mdi:arrow-left
+    navigation_path: /lovelace-minihass/start
