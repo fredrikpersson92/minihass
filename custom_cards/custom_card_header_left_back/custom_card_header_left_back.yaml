@@ -1,0 +1,25 @@
+custom_card_header_left_back:
+  variables:
+    icon:
+    navigation_path:
+  icon: "[[[ return variables.icon ]]]"
+  show_name: false
+  show_icon: true
+  show_label: false
+  show_state: false
+  tap_action:
+    action: navigate
+    navigation_path: "[[[ return variables.navigation_path ]]]"
+  styles:
+    card:
+      - height: 30px
+      - width: 68px
+      - border-radius: 50px
+      - background: "var(--contrast-10)"
+      - margin: 0
+      - padding: 0
+    img_cell:
+      - height: 100%
+    icon:
+      - width: 30%
+      - color: "var(--contrast-33)"
