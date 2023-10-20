@@ -1,0 +1,65 @@
+- type: "custom:button-card"
+  show_name: false
+  show_icon: false
+  show_label: false
+  show_state: false
+  styles:
+    grid:
+      - grid-template-areas: '"item1 item2"'
+      - grid-template-columns: min-content 1fr
+      - column-gap: 8px
+    card:
+      - height: 100%
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--border-radius)"
+      - background: none
+      - padding: 0
+      - margin: 0
+      - overflow: visible
+      - z-index: 1
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        entity: person.fredrik_persson
+        name: FP
+        show_name: true
+        show_icon: false
+        show_label: false
+        show_state: false
+        tap_action: &person_action
+          action: navigate
+          navigation_path: '#settings'
+        styles: &person_styles
+          card:
+            - height: 30px
+            - width: 30px
+            - border-radius: 50px
+            - background: "var(--contrast-10)"
+            - margin: 0
+          name:
+            - text-align: center
+            - font-size: "var(--fs-300)"
+            - font-family: 'Montserrat'
+            - font-weight: 600
+            - align-self: center
+            - color: "var(--contrast-33)"
+        state: &person_state
+          - value: "home"
+            styles:
+              card:
+                - background: "var(--color-green)"
+              name:
+                - color: "var(--color-white)"
+    item2:
+      card:
+        type: "custom:button-card"
+        entity: person.sara_graff
+        name: SG
+        show_name: true
+        show_icon: false
+        show_label: false
+        show_state: false
+        tap_action: *person_action
+        styles: *person_styles
+        state: *person_state
