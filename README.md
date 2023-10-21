@@ -6,22 +6,24 @@
 I was fortunate to have this featured in Everything Smart Home's [Youtube video](https://www.youtube.com/watch?v=7g9T_vKD4ww&t=8s&ab_channel=EverythingSmartHome) and there have since been many requests to share the cards. So here it goes! I hope everything works as I am quite new to sharing things on Github :)**
 
 ## How do I install it?
-This dashboard is 90% made of [custom Button Card](https://github.com/custom-cards/button-card). However, this UI does use some custom components that will need to be downloaded from HACS, but other than that, it completely relies on your ability to add lines of YAML code to either your GUI Lovelace dashboard or through the backend, using tools such as Visual Studio Code. The latter is much easier and gives you more control. However, if you already have a dashboard in the GUI editor, then you can add any of the cards there by using the manual card and pasting the code. Please note that the cards rely on templates though, which will need to be added in the Raw Config Editor, or in your Lovelace config. You can read more on that [here](https://github.com/custom-cards/button-card#configuration-templates). 
+This dashboard is 90% made of [button Card](https://github.com/custom-cards/button-card). However, this UI does use some custom components that will need to be downloaded from HACS, but other than that, it completely relies on your ability to add lines of YAML code to either your GUI Lovelace dashboard or through the backend, using tools such as Visual Studio Code. The latter is much easier and gives you more control. However, if you already have a dashboard in the GUI editor, then you can add any of the cards there by using the manual card and pasting the code. Please note that the cards rely on templates though, which will need to be added in the Raw Config Editor, or in your Lovelace config. You can read more on that [here](https://github.com/custom-cards/button-card#configuration-templates). 
 
 ### Step 1 - Install button-card
-The templates rely on the integration button-card (https://github.com/custom-cards/button-card). If you have install HACS, you can jump to https://github.com/custom-cards/button-card#installation-and-tracking-with-hacs. If not, please see https://github.com/custom-cards/button-card#installation how to install it manually. 
+If you've already installed HACS, proceed to [install via HACS](https://github.com/custom-cards/button-card#installation-and-tracking-with-hacs). Otherwise, see how to install it manually [here](https://github.com/custom-cards/button-card#installation).
 
 ### Step 2 - Theme and font
-The components are based on a custom theme to utilize the card's full potential, including light and dark modes. You can either activate the theme globally per device or just for a single dashbord, for example if you have multiple. For a global activation, go to your user accont, search for dashboard, and select the theme after you installed it. You can of course edit the values in the theme to suit your style :) I also opted for the font Montserrat from Google Fonts. To install the theme and the font you have to do the following steps:
+The components utilize a custom theme to maximize the card's capabilities, including both light and dark modes. You can activate this theme either for each single devices or exclusively for a specific dashboard. For global per device activation, navigate to your user account, search for `dashboard`, and select the theme. You're welcome to modify the theme values to fit your preferences! Additionally, I've chosen the Montserrat font from Google Fonts. To install both the theme and font, follow these steps:
 
 #### Install theme
-Inside the config folder create new folder `themes` and copy the file `minihass.yaml` located under `minihass/theme` inside this folder. Than active the theme by adding the followind lines to your `configuration.yaml`.
+Within the config folder, create a new subfolder titled `themes`. Transfer the `minihass.yaml` file, found in `minihass/theme`, to this new folder. Activate the theme by appending the following lines to your `configuration.yaml`:
 ```yaml
 frontend:
   themes: !include_dir_merge_named themes
 ```
 This assumes that the configuration.yaml is in the same folder were the `themes`-folder is located. 
 
+#### Add resources
+To incorporate the button-card and the selected font, insert the following into your 
 ```yaml
   lovelace:
     mode: yaml
@@ -32,17 +34,61 @@ This assumes that the configuration.yaml is in the same folder were the `themes`
       type: css
   ```
 
-
-Ps. If using a YAML dashboard, I recommend creating a folder for all templates and referencing that in your Lovelace configuration. ('m not sure if this also can be done in the GUI)
+#### Adding the button templates
+To utilize the custom-made templates, you must first copy all templates to a designated folder and then reference that folder in your dashboard. Create a directory named `ui_lovelace_minihass` with a subfolder titled `templates`. Transfer all `*.yaml` template files to this subfolder. The structure should resemble:
 ```
-button_card_templates: !include_dir_merge_named "/config/ui_lovelace_minihass/templates/"
+ui_lovelace_minihass
+|_ templates
+   |_ custom_card_light.yaml
+   |_ custom_card_section_title.yaml
+   |_ ...
+```
+
+#### Creating a new dashboard
+The best way to integrate everything in a new dashboard is to do this via the yaml configuration. You can us this dashboard side-by-side with a GUI dashboard. Within the directory containing your `configuration.yaml`, create a new file called `dashboard.yaml`. Customize the file name as desired and adjust the name withine `configration.yaml` accordingly. 
+```yaml
+lovelace:
+  mode: yaml
+  resources:
+    - url: /hacsfiles/button-card/button-card.js
+      type: module
+    - url: https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+      type: css
+  
+  dashboards:
+    home-dashboard:
+      mode: yaml
+      filename: "/config/dashboard.yaml"   #path to your dashboard.yaml
+      title: TITLE                         #a title of the dashboard you like
+      icon: mdi:script
+      show_in_sidebar: true
+```
+Within the `dashboard.yaml` file, begin with this quickstart example:
+```yaml
+title: Example
+button_card_templates: !include_dir_merge_named "/config/ui_lovelace_minihass/templates/"   #path to your templates .yaml
+views:
+  - title: Home
+    theme: MiniHass_Dark   #Theme you want to activate
+    cards:
+      - type: "custom:button-card"
+        template:
+          - custom_card_section_title
+        variables:
+          section_title: Navigate
+
+      - type: "custom:button-card"
+        entity: ENTITY          #specify the entity to switch on/off, e.g. a light
+        template:
+          - custom_card_light
+        variables:
+          light_name: Window
+          light_label: Bedroom
 ```
 
 
 ## Included cards
-
-I will keep adding new cards gradually. For now, these are the available card templates you can copy and use. For each card, there is a template (multiple for some) and an example of the actual code to put in your dashboard. 
-
+I'll be gradually adding new card templates. Currently, these are the available templates for you to replicate and utilize. Each card features a template (some have multiple) along with an example code to integrate into your dashboard:
 * Settings Card
 * Section Title Card
 * Navigate Card
@@ -56,4 +102,4 @@ I will keep adding new cards gradually. For now, these are the available card te
 
 
 
-*Please note that this is very much a work in progress and many things are not perfect. Especially the backend theme :)
+*Please be aware that this project is still evolving. Some elements, especially the backend theme, may not be perfect. :)
