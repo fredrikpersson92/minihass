@@ -1,0 +1,111 @@
+custom_card_header_people:
+  variables:
+    entity1:
+    init1:
+    entity2:
+    init2:
+    entity3:
+    init3:
+    entity4:
+    init4:
+    entity5:
+    init5:
+  show_name: false
+  show_icon: false
+  show_label: false
+  show_state: false
+  styles:
+    grid:
+      - grid-template-areas: '"item1 item2 item3 item4 item5"'
+      - grid-template-columns: min-content min-content min-content min-content 1fr
+      - column-gap: 8px
+    card:
+      - height: 100%
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--border-radius)"
+      - background: none
+      - padding: 0
+      - margin: 0
+      - overflow: visible
+      - z-index: 1
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        entity: "[[[ return variables.entity1 ]]]"
+        name: "[[[ return variables.init1 ]]]"
+        show_name: true
+        show_icon: false
+        show_label: false
+        show_state: false
+        tap_action: &person_action
+          action: more-info
+        styles: &person_styles
+          card:
+            - height: 30px
+            - width: 30px
+            - border-radius: 50px
+            - background: "var(--contrast-10)"
+            - margin: 0
+          name:
+            - text-align: center
+            - font-size: "var(--fs-300)"
+            - font-family: 'Montserrat'
+            - font-weight: 600
+            - align-self: center
+            - color: "var(--contrast-33)"
+        state: &person_state
+          - value: "home"
+            styles:
+              card:
+                - background: "var(--color-green)"
+              name:
+                - color: "var(--color-white)"
+    item2:
+      card:
+        type: "custom:button-card"
+        entity: "[[[ return variables.entity2 ]]]"
+        name: "[[[ return variables.init2 ]]]"
+        show_name: true
+        show_icon: false
+        show_label: false
+        show_state: false
+        tap_action: *person_action
+        styles: *person_styles
+        state: *person_state
+    item3:
+      card:
+        type: "custom:button-card"
+        entity: "[[[ return variables.entity3 ]]]"
+        name: "[[[ return variables.init3 ]]]"
+        show_name: true
+        show_icon: false
+        show_label: false
+        show_state: false
+        tap_action: *person_action
+        styles: *person_styles
+        state: *person_state
+    item4:
+      card:
+        type: "custom:button-card"
+        entity: "[[[ return variables.entity4 ]]]"
+        name: "[[[ return variables.init4 ]]]"
+        show_name: true
+        show_icon: false
+        show_label: false
+        show_state: false
+        tap_action: *person_action
+        styles: *person_styles
+        state: *person_state
+    item5:
+      card:
+        type: "custom:button-card"
+        entity: "[[[ return variables.entity5 ]]]"
+        name: "[[[ return variables.init5 ]]]"
+        show_name: true
+        show_icon: false
+        show_label: false
+        show_state: false
+        tap_action: *person_action
+        styles: *person_styles
+        state: *person_state
