@@ -84,3 +84,5 @@ custom_card_light:
           return '<ha-icon icon="far:lightbulb"></ha-icon>';
         }
       ]]]
+  hold_action:
+    action: more-info
