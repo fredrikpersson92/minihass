@@ -23,7 +23,7 @@ frontend:
 This assumes that the configuration.yaml is in the same folder were the `themes`-folder is located. 
 
 #### Add resources
-To incorporate the button-card and the selected font, insert the following into your 
+To incorporate the button-card and the selected font, insert the following into your configuration.yaml
 ```yaml
   lovelace:
     mode: yaml
