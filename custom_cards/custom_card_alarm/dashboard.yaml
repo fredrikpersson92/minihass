@@ -48,7 +48,7 @@
           alarm_color: "var(--color-red)"
         template:
           - custom_field_alarm_entity
-    silence: *silence
+    silence: silence
     icon:
       <ha-icon icon="far:bell" style="height:40px"></ha-icon>
 
@@ -111,7 +111,7 @@
           alarm_color: "var(--color-blue)"
         template:
           - custom_field_alarm_entity
-    silence: *silence
+    silence: silence
     icon:
       <ha-icon icon="mdi:liquid-spot" style="height:40px"></ha-icon>
 
