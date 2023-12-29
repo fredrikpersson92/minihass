@@ -1,14 +1,14 @@
 - type: "custom:button-card"
-    template:
-      - custom_card_header_people
-    variables:
-      entity1: person.one
-      init1: P1
-      entity2: person.two
-      init2: P2
-      entity3: person.three
-      init3: P3
-      entity4: person.four
-      init4: P4
-      entity5: person.five
-      init5: P5
+  template:
+    - custom_card_header_people
+  variables:
+    entity1: person.one
+    init1: P1
+    entity2: person.two
+    init2: P2
+    entity3: person.three
+    init3: P3
+    entity4: person.four
+    init4: P4
+    entity5: person.five
+    init5: P5
