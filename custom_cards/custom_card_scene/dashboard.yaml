@@ -1,4 +1,5 @@
 - type: "custom:button-card"
+  entity: input_select.scene_card
   template:
     - custom_card_scene
   name: Active scene
