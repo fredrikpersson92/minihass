@@ -1,7 +1,5 @@
 custom_card_scene:
   entity: input_select.scene_card
-  name: Active scene
-  label: None
   show_name: true
   show_icon: false
   show_label: true
