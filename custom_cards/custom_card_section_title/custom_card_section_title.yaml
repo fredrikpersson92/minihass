@@ -3,21 +3,29 @@ custom_card_section_title:
   variables:
     section_title: 
   name: "[[[ return variables.section_title ]]]"
-  show_name: true
   show_icon: false
-  show_label: false
   show_state: false
   styles:
     card:
-      - height: 100%
+      - height: "auto"
+      - width: "auto"
       - border-radius: "var(--border-radius)"
       - box-shadow: "var(--border-radius)"
       - background: "none"
-      - margin: 0 0 0 1rem
+      - margin-top: "0.4rem"
+      - margin-left: "1rem"
     name:
       - color: "var(--contrast-100)"
       - font-size: "var(--fs-600)"
       - font-family: Montserrat
       - font-weight: 600
+      - text-align: left
+      - justify-self: start
+    label:
+      - color: "var(--contrast-100)"
+      - opacity: 0.5
+      - font-size: "var(--fs-400)"
+      - font-family: Montserrat
+      - font-weight: 400
       - text-align: left
       - justify-self: start
