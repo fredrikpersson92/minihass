@@ -1,0 +1,8 @@
+- type: "custom:button-card"
+  template:
+    - custom_card_scene
+  variables:
+    icon: <ha-icon icon="mdi:multimedia"></ha-icon>
+    icon2: <ha-icon icon="mdi:multimedia"></ha-icon>
+    icon3: <ha-icon icon="mdi:multimedia"></ha-icon>
+    icon_opacity: .025
