@@ -1,0 +1,184 @@
+custom_card_scene:
+  entity: input_select.scene_card
+  name: Active scene
+  label: None
+  show_name: true
+  show_icon: false
+  show_label: true
+  show_state: false
+  tap_action: none
+  styles:
+    grid:
+      - grid-template-areas: '"item1 item2 item3" "n n n" "l l l"'
+      - grid-template-columns: 1fr min-content min-content
+      - grid-template-rows: 1fr min-content min-content
+      - column-gap: .5rem
+      - row-gap: 4px
+    card:
+      - height: 100%
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: .5rem .5rem 1rem 1rem
+    name:
+      - text-align: left
+      - font-size: "var(--fs-400)"
+      - font-family: Montserrat
+      - font-weight: 500
+      - justify-self: start
+      - align-self: end
+      - color: rgba(var(--color-white),.66)
+    label:
+      - text-align: left
+      - font-size: "var(--fs-800-resp)"
+      - font-family: Montserrat
+      - font-weight: 500
+      - justify-self: start
+      - align-self: end
+      - color: rgba(var(--color-white),1)
+    custom_fields:
+      item1: &items
+        - justify-self: end
+        - align-self: start
+      item2: *items
+      item3: *items
+  state:
+    - value: "None"
+      styles:
+        name:
+          - color: rgba(var(--contrast-100),.66)
+          - opacity: .33
+        label:
+          - color: rgba(var(--contrast-100),.66)
+    - value: "Office Mood"
+      label: Office Mood
+      styles:
+        card:
+          - background: "var(--gradient-orange)"
+    - value: "Movie Time"
+      label: Movie Time
+      styles:
+        card:
+          - background: "var(--gradient-purple)"
+    - value: 'Night'
+      label: Night
+      styles:
+        card:
+          - background: "var(--gradient-blue)"
+  custom_fields:
+    item1:
+      card:
+        type: "custom:button-card"
+        icon: mdi:laptop
+        entity: "[[[ return entity.entity_id ]]]"
+        show_state: false
+        show_icon: true
+        show_lable: false
+        show_name: false
+        tap_action:
+          action: call-service
+          service: >
+            [[[
+              if (states['input_select.scene_card'].state == "Office Mood"){
+                return 'script.scene_none';
+              } else {
+                return 'script.scene_office_mood';
+              }
+            ]]] 
+        styles: &item_styles
+          card:
+            - background: none
+          img_cell:
+            - height: 40px
+            - width: 40px
+            - background: rgba(var(--contrast-0),.5)
+            - border-radius: 50px
+            - align-self: start
+            - justify-self: end
+          icon:
+            - height: 100%
+            - justify-self: center
+            - color: rgba(var(--contrast-100),.25)
+        state:
+          - value: "Office Mood"
+            styles:
+              icon:
+                - color: rgba(var(--color-white),1)
+          - value: "None"
+            styles:
+              icon:
+                - color: rgba(var(--contrast-100),.25)
+              img_cell:
+                - background: rgba(var(--contrast-0),.25)
+        extra_styles: &extra_styles |
+          :hover #icon{
+            transform: scale(1.25) !important;
+            transition: transform .3s ease-in-out;
+          }
+          :not(:hover) #icon{
+            transform: scale(1) !important;
+            transition: transform .6s ease-in-out;
+          }
+    item2:
+      card:
+        type: "custom:button-card"
+        icon: mdi:movie-roll
+        entity: "[[[ return entity.entity_id ]]]"
+        show_state: false
+        show_icon: true
+        show_lable: false
+        show_name: false
+        tap_action:
+          action: call-service
+          service: >
+            [[[
+              if (states['input_select.scene_card'].state == "Movie Time"){
+                return 'script.scene_none';
+              } else {
+                return 'script.scene_movie_time';
+              }
+            ]]] 
+        styles: *item_styles
+        state:
+          - value: "Movie Time"
+            styles:
+              icon:
+                - color: rgba(var(--color-white),1)
+          - value: "None"
+            styles:
+              icon:
+                - color: rgba(var(--contrast-100),.25)
+              img_cell:
+                - background: rgba(var(--contrast-0),.25)
+        extra_styles: *extra_styles
+    item3:
+      card:
+        type: "custom:button-card"
+        icon: mdi:weather-night
+        entity: "[[[ return entity.entity_id ]]]"
+        show_state: false
+        show_icon: true
+        show_lable: false
+        show_name: false
+        tap_action:
+          action: call-service
+          service: >
+            [[[
+              if (states['input_select.scene_card'].state == "Night"){
+                return 'script.scene_none';
+              } else {
+                return 'script.scene_night';
+              }
+            ]]] 
+        styles: *item_styles
+        state:
+          - value: "Night"
+            styles:
+              icon:
+                - color: rgba(var(--color-white),1)
+          - value: "None"
+            styles:
+              icon:
+                - color: rgba(var(--contrast-100),.25)
+              img_cell:
+                - background: rgba(var(--contrast-0),.25)
+        extra_styles: *extra_styles
