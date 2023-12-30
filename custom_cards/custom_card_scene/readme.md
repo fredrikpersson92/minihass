@@ -54,3 +54,5 @@ icon: mdi:auto-fix
 
 See screenshot below for what it should look like in the visual editor:
 ![Scripts](https://github.com/fredrikpersson92/minihass/assets/105781178/828ef1e1-4925-4831-8de1-2769d124f130)
+
+Ps. Don't forget to change the colors and fonts to your liking.
