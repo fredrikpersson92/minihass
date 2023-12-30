@@ -3,9 +3,7 @@ custom_card_section_title:
   variables:
     section_title: 
   name: "[[[ return variables.section_title ]]]"
-  show_name: true
   show_icon: false
-  show_label: true
   show_state: false
   styles:
     card:
