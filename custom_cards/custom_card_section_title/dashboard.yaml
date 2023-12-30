@@ -3,3 +3,6 @@
     - custom_card_section_title
   variables:
     section_title: Navigate
+    section_label:
+  show_name: true
+  show_label: false
