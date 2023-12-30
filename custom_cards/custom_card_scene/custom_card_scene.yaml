@@ -1,5 +1,4 @@
 custom_card_scene:
-  entity: input_select.scene_card
   show_name: true
   show_icon: false
   show_label: true
