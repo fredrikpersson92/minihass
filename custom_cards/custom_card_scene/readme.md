@@ -17,15 +17,15 @@ icon: mdi:movie-roll
 ```
 
 ```
-alias: Scene Night
+alias: Scene Office Mood
 sequence:
   - service: input_select.select_option
     data:
-      option: Night
+      option: Office Mood
     target:
       entity_id: input_select.scene_card
 mode: single
-icon: mdi:weather-night
+icon: mdi:laptop
 ```
 
 ```
