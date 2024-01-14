@@ -104,5 +104,6 @@ I'll be gradually adding new card templates. Currently, these are the available 
 
 *Please be aware that this project is still evolving. Some elements, especially the backend theme, may not be perfect. :)
 
+If you feel this is useful for your own Home Assistant dashboard, feel free to support my work by "Buying me a coffee" or just give a thumbs up on the community forum thread. I love to see how you adapt to your own projects!
 <a href="https://www.buymeacoffee.com/fredrik_persson_" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
