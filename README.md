@@ -103,3 +103,6 @@ I'll be gradually adding new card templates. Currently, these are the available 
 
 
 *Please be aware that this project is still evolving. Some elements, especially the backend theme, may not be perfect. :)
+
+<a href="https://www.buymeacoffee.com/fredrik_persson_" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
