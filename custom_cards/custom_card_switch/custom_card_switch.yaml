@@ -1,0 +1,77 @@
+---
+custom_card_switch:
+  variables:
+    switch_name: 
+    switch_label:
+    switch_icon: "mdi:power-socket-eu"
+    switch_background_on: "var(--color-yellow)"
+  entity: "[[[ return entity.entity_id ]]]"
+  name: "[[[ return variables.switch_name ]]]"
+  label: "[[[ return variables.switch_label ]]]"
+  show_name: true
+  show_icon: true
+  show_label: true
+  styles:
+    grid:
+      - grid-template-areas: '". i" "n n" "l ."'
+      - grid-template-rows: 1fr 1fr 1fr
+      - grid-template-columns: 1fr 1fr
+      - row-gap: 8px
+    card:
+      - height: 100%
+      - border-radius: "var(--border-radius)"
+      - box-shadow: "var(--box-shadow)"
+      - padding: 1rem
+      - background: var(--base)
+    img_cell:
+      - justify-content: end
+      - overflow: hidden
+      - padding: 0 0 0 0
+    icon:
+      - justify-self: end
+      - align-self: center
+      - color: "var(--color-white)"
+      - width: "var(--button-small)"
+      - overflow: hidden
+    name:
+      - text-align: left
+      - font-size: "var(--fs-400)"
+      - font-family: Montserrat
+      - font-weight: 600
+      - justify-self: start
+      - align-self: end
+      - color: "var(--contrast-100)"
+      - overflow: visible
+    label:
+      - text-align: left
+      - font-size: "var(--fs-300)"
+      - font-family: Montserrat
+      - font-weight: 600
+      - justify-self: start
+      - align-self: center
+      - color: "var(--contrast-100)"
+      - overflow: visible
+  state:
+    - value: "off"
+      icon: mdi:power-plug-off
+      styles:
+        icon:
+          - color: "var(--contrast-33)"
+    - value: "on"
+      icon: mdi:power-plug
+      styles:
+        card:
+          - background: "[[[ return variables.switch_background_on ]]]"
+        name:
+          - color: "var(--contrast-0)"
+        label:
+          - color: "var(--contrast-0)"
+        icon:
+          - color: "var(--contrast-0)"
+    - value: "unavailable"
+      icon: mdi:power-plug-outline
+      styles:
+        icon:
+          - color: "var(--contrast-33)"
+  hold_action:
+    action: more-info
